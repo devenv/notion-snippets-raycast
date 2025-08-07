@@ -1,6 +1,6 @@
-# 🚀 Notion Snippets
+# 📝 Notion Snippets
 
-Manage and access code snippets stored in your Notion database with lightning-fast search and seamless team collaboration.
+A Raycast extension for managing code snippets stored in your Notion database with search functionality and team collaboration.
 
 ![Raycast Extension](https://img.shields.io/badge/Raycast-Extension-red)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
@@ -8,16 +8,16 @@ Manage and access code snippets stored in your Notion database with lightning-fa
 
 ## ✨ Features
 
-- **⚡ Lightning Fast Search**: Instantly find and access your code snippets from Notion
-- **📋 Quick Copy & Paste**: Copy snippets to clipboard or paste directly to active applications  
-- **➕ Easy Snippet Management**: Add new snippets with rich metadata through a clean form interface
-- **👥 Team Collaboration**: Share snippets across your team through a shared Notion database
-- **📊 Usage Tracking**: Automatically track snippet usage to surface most popular snippets first
-- **🏷️ Smart Organization**: Organize snippets by language, category, and description
-- **📝 Rich Metadata**: Store descriptions, categories, and usage examples alongside your code
+- **🔍 Search & Filter**: Find code snippets by name, description, or programming language
+- **📋 Copy & Paste**: Copy snippets to clipboard or paste directly to active applications  
+- **➕ Add Snippets**: Create new snippets with metadata through a clean form interface
+- **👥 Team Collaboration**: Share snippets across your team using a shared Notion database
+- **📊 Usage Tracking**: Track snippet usage to identify frequently used code
+- **🏷️ Organization**: Organize snippets by language, category, and description
+- **📝 Metadata Support**: Store descriptions, categories, and usage examples with your code
 - **🔍 Code Preview**: Preview snippets with syntax highlighting before copying
-- **🛠️ Setup Helper**: Built-in setup guide and database ID extractor for easy configuration
-- **⌨️ Keyboard Shortcuts**: Intuitive shortcuts for all actions (⌘+C to copy, ⌘+P to preview, etc.)
+- **🛠️ Setup Helper**: Guided setup with database ID extraction from Notion URLs
+- **⌨️ Keyboard Shortcuts**: Standard shortcuts for common actions (⌘+C, ⌘+P, ⌘+V, etc.)
 
 ## Setup
 
@@ -59,17 +59,17 @@ Create a Notion database with these exact property names:
 ### 5. Configure Extension
 
 1. Install the extension from Raycast Store
-2. Use the **"Setup Helper"** command for guided configuration
-3. Enter your Notion API Key and Database ID (use the helper to extract Database ID from URL)
+2. Use the "Setup Helper" command for guided configuration
+3. Enter your Notion API Key and Database ID
 4. Set your preferred default language
 
-💡 **Pro Tip**: Use the Setup Helper command to extract your Database ID automatically from your Notion database URL!
+💡 **Tip**: Use the Setup Helper command to extract your Database ID from your Notion database URL.
 
-## 🎯 Usage
+## 📖 Usage
 
 ### 🔍 Search Snippets
-- Use **"Search Snippets"** command
-- Type to search by name, description, or language
+- Use the "Search Snippets" command
+- Search by name, description, or language
 - Filter by programming language using the dropdown
 - **⌘+C** - Copy code to clipboard
 - **⌘+V** - Paste code directly to active app  
@@ -77,43 +77,43 @@ Create a Notion database with these exact property names:
 - **⌘+O** - Open snippet in Notion
 
 ### ➕ Add Snippets  
-- Use **"Add Snippet"** command
+- Use the "Add Snippet" command
 - Code auto-populates from clipboard if detected
-- **⌘+V** - Paste code from clipboard manually
+- **⌘+V** - Paste code from clipboard
 - **⌘+Enter** - Save snippet to Notion
-- Form includes validation and helpful tips
+- Form includes validation and error messages
 
 ### 🛠️ Setup & Configuration
-- Use **"Setup Helper"** command for guided setup
-- Extract Database ID from Notion URL automatically
-- Complete setup instructions and troubleshooting guide
+- Use the "Setup Helper" command for guided setup
+- Extract Database ID from Notion URLs
+- Access setup instructions and troubleshooting
 
-## Team Collaboration
+## 👥 Team Collaboration
 
-This extension works perfectly for team snippet sharing:
+To share snippets across your team:
 
 1. Create a shared workspace in Notion
 2. Set up the snippets database in the shared workspace
 3. Each team member creates their own integration
 4. Share the database with all team member integrations
-5. Everyone can now add, search, and use shared snippets
+5. Team members can add, search, and use shared snippets
 
-## Privacy & Security
+## 🔒 Privacy & Security
 
-- Your Notion API key is stored securely in Raycast's encrypted preferences
-- All communication happens directly between Raycast and Notion's API
+- Notion API keys are stored securely in Raycast's encrypted preferences
+- Communication occurs directly between Raycast and Notion's API
 - No data is sent to third parties
-- The extension is fully open source
+- Extension source code is publicly available
 
-## Troubleshooting
+## 🔧 Troubleshooting
 
 **"Failed to fetch snippets"**
-- Check your API key and database ID in extension preferences
+- Verify your API key and database ID in extension preferences
 - Ensure the integration has access to the database
-- Verify all required database properties exist with exact names
+- Check that all required database properties exist with exact names
 
 **Properties not loading**
-- Ensure all required properties exist in your Notion database
+- Confirm all required properties exist in your Notion database
 - Property names are case-sensitive and must match exactly
 
-For more help, open an issue on GitHub or reach out on the Raycast community.
+For support, open an issue on GitHub or contact the Raycast community.
