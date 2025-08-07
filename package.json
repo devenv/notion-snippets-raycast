@@ -1,0 +1,122 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "notion-snippets",
+  "title": "Notion Snippets", 
+  "description": "🚀 Manage and access code snippets stored in your Notion database with lightning-fast search and seamless team collaboration",
+  "icon": "extension-icon.png",
+  "author": "your-raycast-username",
+  "categories": [
+    "Developer Tools",
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-snippets",
+      "title": "Search Snippets",
+      "subtitle": "Notion Snippets",
+      "description": "Search and copy code snippets from your Notion database",
+      "mode": "view",
+      "keywords": [
+        "code",
+        "snippet", 
+        "search",
+        "notion"
+      ]
+    },
+    {
+      "name": "add-snippet", 
+      "title": "Add Snippet",
+      "subtitle": "Notion Snippets", 
+      "description": "Add a new code snippet to your Notion database",
+      "mode": "view",
+      "keywords": [
+        "add",
+        "create",
+        "snippet",
+        "notion"
+      ]
+    },
+    {
+      "name": "setup-helper",
+      "title": "Setup Helper",
+      "subtitle": "Notion Snippets",
+      "description": "🛠️ Setup guide and database ID extractor for easy configuration",
+      "mode": "view",
+      "keywords": [
+        "setup",
+        "config",
+        "database",
+        "helper",
+        "notion"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "notionApiKey",
+      "type": "password",
+      "required": true,
+      "title": "🔑 Notion API Key",
+      "description": "Your Notion integration secret token. Create one at: https://www.notion.com/my-integrations",
+      "placeholder": "secret_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "link": "https://www.notion.com/my-integrations"
+    },
+    {
+      "name": "snippetDatabaseId",
+      "type": "textfield",
+      "required": true, 
+      "title": "🗄️ Database ID",
+      "description": "Copy the database ID from your Notion snippets database URL (32-character string between workspace name and ?v=). Example: notion.so/workspace/DATABASE_ID?v=...",
+      "placeholder": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    },
+    {
+      "name": "notionDatabaseUrl",
+      "type": "textfield",
+      "required": false,
+      "title": "📋 Database URL (Helper)",
+      "description": "Paste your full Notion database URL here to easily extract the Database ID above",
+      "placeholder": "https://notion.so/workspace/your-database-id?v=..."
+    },
+    {
+      "name": "defaultLanguage",
+      "type": "dropdown",
+      "required": false,
+      "title": "🌐 Default Language", 
+      "description": "Default programming language for new snippets",
+      "default": "javascript",
+      "data": [
+        {"title": "🟨 JavaScript", "value": "javascript"},
+        {"title": "🔷 TypeScript", "value": "typescript"},
+        {"title": "🐍 Python", "value": "python"},
+        {"title": "⚛️ React", "value": "react"},
+        {"title": "🎨 CSS", "value": "css"},
+        {"title": "📄 HTML", "value": "html"},
+        {"title": "🗄️ SQL", "value": "sql"},
+        {"title": "💻 Shell", "value": "shell"},
+        {"title": "🚀 Go", "value": "go"},
+        {"title": "⚙️ Rust", "value": "rust"}
+      ]
+    }
+  ],
+  "dependencies": {
+    "@notionhq/client": "^2.2.3",
+    "@raycast/api": "^1.83.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop", 
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\n\nIt seems like you are trying to publish the Raycast extension to npm.\n\nIf you did intend to publish it to npm, remove the \\\"prepublishOnly\\\" script and rerun \\\"npm publish\\\" again.\nIf you wanted to publish it to the Raycast Store instead, use \\\"npm run publish\\\" instead.\n\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
